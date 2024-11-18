@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pastas</title>
+
+    <!-- Font Awesome Icon Library -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Custom styles for the buttons */
+      .buttons a.siguiente-receta {
+        background-color: green;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+      }
+
+      .buttons a.siguiente-receta:hover {
+        background-color: darkgreen;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <img src="img/nombre.png" alt="Logo" />
+      </div>
+      <a href="#" class="menu-toggle" onclick="toggleMenu()">&#9776;</a>
+      <ul class="navigation">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Acerca</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </header>
+
+    <div class="banner">
+      <img src="img/bg.jpg" class="bg" alt="Banner Background" />
+      <div class="content">
+        <img src="img/name.png" class="movieTitle" alt="Movie Title" />
+        <h4>
+          <span>2024</span>
+          <span><i>13+</i></span>
+          <span>1h 30m</span>
+          <span>Plant Based</span>
+        </h4>
+
+        <div class="recipe-container">
+          <!-- Recipe 1 -->
+          <div class="recipe">
+            <h2>Tacos Veganos de Lentejas</h2>
+            <ul>
+              <li>1 taza de lentejas cocidas</li>
+              <li>1/2 cebolla picada</li>
+              <li>1 diente de ajo picado</li>
+              <li>1 pimiento rojo picado</li>
+              <li>1/2 taza de tomate picado</li>
+              <li>1 cucharadita de comino</li>
+              <li>1/2 cucharadita de pimentón</li>
+              <li>Sal y pimienta al gusto</li>
+              <li>Tortillas de maíz (ver receta abajo)</li>
+            </ul>
+
+            <h3>Preparación:</h3>
+            <ol>
+              <li>
+                En una sartén, calienta un poco de aceite de oliva a fuego
+                medio.
+              </li>
+              <li>
+                Saltea la cebolla, el ajo y el pimiento rojo hasta que estén
+                tiernos.
+              </li>
+              <li>
+                Agrega el tomate, las lentejas cocidas, comino y pimentón.
+                Cocina a fuego bajo, mezclando hasta que los sabores se integren
+                bien. Ajusta con sal y pimienta al gusto.
+              </li>
+              <li>
+                Sirve la mezcla de lentejas en las tortillas de maíz y disfruta
+                de estos deliciosos tacos.
+              </li>
+            </ol>
+          </div>
+
+          <!-- Recipe 2 -->
+          <div class="recipe">
+            <h2>Crema de Anacardos</h2>
+            <ul>
+              <li>
+                1 taza de anacardos remojados (mínimo 4 horas o toda la noche)
+              </li>
+              <li>1/2 taza de agua</li>
+              <li>Jugo de 1 limón</li>
+              <li>Sal al gusto</li>
+            </ul>
+
+            <h3>Preparación:</h3>
+            <ol>
+              <li>
+                Escurre los anacardos y colócalos en una licuadora o procesador
+                de alimentos.
+              </li>
+              <li>Agrega el agua, el jugo de limón y una pizca de sal.</li>
+              <li>
+                Procesa hasta obtener una crema suave y homogénea, agregando más
+                agua si es necesario para ajustar la consistencia.
+              </li>
+              <li>Sirve la crema como acompañamiento para los tacos.</li>
+            </ol>
+          </div>
+
+          <!-- Recipe 3 -->
+          <div class="recipe">
+            <h2>Tortillas de Maíz</h2>
+            <ul>
+              <li>2 tazas de harina de maíz nixtamalizado (masa harina)</li>
+              <li>1 1/2 tazas de agua tibia</li>
+              <li>Una pizca de sal</li>
+            </ul>
+
+            <h3>Preparación:</h3>
+            <ol>
+              <li>En un tazón grande, mezcla la harina de maíz con la sal.</li>
+              <li>
+                Agrega el agua tibia poco a poco mientras amasas hasta obtener
+                una masa suave, que no se pegue a las manos.
+              </li>
+              <li>
+                Divide la masa en pequeñas bolas, aproximadamente del tamaño de
+                una pelota de golf.
+              </li>
+              <li>
+                Coloca cada bola entre dos hojas de papel encerado y aplánala
+                con una prensa de tortillas o un rodillo hasta obtener una
+                tortilla delgada.
+              </li>
+              <li>
+                Cocina las tortillas en una sartén caliente, unos 1-2 minutos
+                por cada lado o hasta que comiencen a dorarse.
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <a href="#" onclick="toggleVideo();"
+            ><i class="fa fa-play" aria-hidden="true"></i> Play</a
+          >
+          <a href="#" class="siguiente-receta"
+            ><i class="fa fa-arrow-right" aria-hidden="true"></i> Siguiente
+            Receta</a
+          >
+          <a href="#"><i class="fa fa-share" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trailer section with YouTube iframe -->
+    <div class="trailer">
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/dx91h4HfOdE?enablejsapi=1"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen
+        id="youtubePlayer"
+      ></iframe>
+      <img
+        src="img/close.png"
+        class="close"
+        alt="Close"
+        onclick="toggleVideo();"
+      />
+    </div>
+
+    <script>
+      function toggleVideo() {
+        const trailer = document.querySelector(".trailer");
+        const youtubePlayer = document.getElementById("youtubePlayer");
+        trailer.classList.toggle("active");
+        if (trailer.classList.contains("active")) {
+          youtubePlayer.contentWindow.postMessage(
+            '{"event":"command","func":"playVideo","args":""}',
+            "*"
+          );
+        } else {
+          youtubePlayer.contentWindow.postMessage(
+            '{"event":"command","func":"stopVideo","args":""}',
+            "*"
+          );
+        }
+      }
+
+      function toggleMenu() {
+        const navigation = document.querySelector(".navigation");
+        const menuToggle = document.querySelector(".menu-toggle");
+
+        navigation.classList.toggle("active");
+
+        // Cambia el ícono entre "☰" (menú) y "✖" (cruz)
+        menuToggle.innerHTML = navigation.classList.contains("active")
+          ? "✖"
+          : "&#9776;";
+      }
+    </script>
+  </body>
+</html>
